@@ -1,6 +1,6 @@
 {
     "name":        "h1/wplinth",
-    "description": "A collection of base classes for WordPress development",
+    "description": "A collection of base classes for object-oriented WordPress development",
     "license":     "GPL-2.0+",
     "authors": [
         {
