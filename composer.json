@@ -2,6 +2,7 @@
     "name":        "h1/wplinth",
     "description": "A collection of base classes for object-oriented WordPress development",
     "license":     "GPL-2.0+",
+    "version":     "0.1"
     "authors": [
         {
             "name": "Aki Björklund",
