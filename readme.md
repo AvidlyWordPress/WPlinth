@@ -8,5 +8,8 @@ This plugin is maintained by [H1](https://h1.fi/en/).
 
 ## Changelog ##
 
+**0.2**
+* Refactor base class for easier testability of WordPress classes.
+
 **0.1**
 * Initial version.
