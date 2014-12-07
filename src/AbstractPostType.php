@@ -26,8 +26,6 @@ abstract class AbstractPostType extends AbstractWPlinthObject {
 		// We support both CMB and Meta Box. Choose one.
 		add_filter( 'cmb_meta_boxes',  array( $this, 'register_meta_boxes' ) );
 		add_filter( 'rwmb_meta_boxes', array( $this, 'register_meta_boxes' ) );
-
-		add_filter( 'loop_start', array( $this, 'preset_custom_fields' ) );
 	}
 
 	public function register_meta_boxes( $meta_boxes ) {
@@ -35,14 +33,6 @@ abstract class AbstractPostType extends AbstractWPlinthObject {
 			$this->set_meta_boxes();
 		}
 		return array_merge( $meta_boxes, $this->meta_boxes );
-	}
-
-	public function preset_custom_fields( $wp_query ) {
-		// Do not process custom fields, if the post meta cache was not updated,
-		// since that would result into a performance regression.
-		if ( ! $wp_query->get('update_post_meta_cache') ) return;
-
-		$this->meta = get_post_meta( $wp_query->post->ID );
 	}
 
 	/**
