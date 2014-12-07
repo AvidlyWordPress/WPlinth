@@ -4,7 +4,7 @@ WPlinth is a simple collection of base classes for easily creating custom post t
 
 ## About
 
-This plugin is maintained by [H1](https://h1.fi/en/).
+This code is maintained by [H1](https://h1.fi/en/).
 
 ## Changelog ##
 
