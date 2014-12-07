@@ -12,9 +12,7 @@ abstract class AbstractPostType extends AbstractWPlinthObject {
 	protected $names;
 	protected $labels;
 
-	protected $meta_boxes = array();
-
-	protected $meta;
+	public $meta_boxes = array();
 
 	public function __construct() {
 		if ( is_callable( array( $this, 'set_registration_parameters' ) ) ) {
@@ -23,15 +21,17 @@ abstract class AbstractPostType extends AbstractWPlinthObject {
 
 		add_action( 'init', array( $this, 'register_type' ), 1 );
 
+		// Set meta_boxes instance variable always, even on front end.
+		if ( is_callable( array( $this, 'set_meta_boxes' ) ) ) {
+			$this->set_meta_boxes();
+		}
+
 		// We support both CMB and Meta Box. Choose one.
 		add_filter( 'cmb_meta_boxes',  array( $this, 'register_meta_boxes' ) );
 		add_filter( 'rwmb_meta_boxes', array( $this, 'register_meta_boxes' ) );
 	}
 
 	public function register_meta_boxes( $meta_boxes ) {
-		if ( is_callable( array( $this, 'set_meta_boxes' ) ) ) {
-			$this->set_meta_boxes();
-		}
 		return array_merge( $meta_boxes, $this->meta_boxes );
 	}
 
