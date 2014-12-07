@@ -8,21 +8,16 @@ namespace WPlinth;
  * @package WPlinth
  */
 abstract class AbstractWPlinthObject {
-	protected $query_builder;
+
+	protected $wp;
 
 	/**
-	 * Set QueryBuilder object (designed to be used for mocking WP_Query)
+	 * Set wp that can be used to get new WordPress objects
+	 * and replaced when needing to mock those.
 	 * 
-	 * @param QueryBuilder $query_builder
+	 * @param object $wp
 	 */
-	public function set_query_builder( QueryBuilderInterface $query_builder ) {
-		$this->query_builder = $query_builder;
-	}
-
-	public function get_query( $args ) {
-		if ( $this->query_builder != null ) {
-			return $this->query_builder->build( $args );
-		}
-		return new \WP_Query( $args );
+	public function set_wp( $wp ) {
+		$this->wp = $wp;
 	}
 }
