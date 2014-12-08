@@ -7,7 +7,7 @@ namespace WPlinth;
  * 
  * @package WPlinth
  */
-abstract class AbstractConnection {
+abstract class Connection {
 
 	public function __construct() {
 		add_action( 'p2p_init', array( $this, 'register_connections' ) );

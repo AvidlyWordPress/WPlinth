@@ -1,11 +1,11 @@
 <?php
 
-namespace WPlinth\Service;
+namespace WPlinth;
 
 /**
  * Adds post meta as post object properties automatically.
  * 
- * @package Erp
+ * @package WPlinth
  */
 class AutoMetaProperty {
 

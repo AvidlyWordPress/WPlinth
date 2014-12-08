@@ -3,17 +3,18 @@
 namespace WPlinth;
 
 /**
- * Wrapper for creating WordPress classes. Helps with testing by making mocking possible.
+ * Wrapper for creating instances of WordPress classes (WP_Query, WP_Error).
+ * Helps with testing by making mocking possible.
  * 
  * @package WPlinth
  */
-class WordPress {
+class WordPressFactory {
 	public function get_query( $args ) {
 		return new \WP_Query( $args );
 	}
 
 	public function get_loopable_query( $args ) {
-		return new \Loopable_Query( $args );
+		return new LoopableQuery( $args );
 	}
 
 	public function get_error( $code = '', $message = '', $data = '' ) {

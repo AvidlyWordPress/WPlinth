@@ -7,7 +7,7 @@ namespace WPlinth;
  * 
  * @package WPlinth
  */
-abstract class AbstractWPlinthObject {
+abstract class WPlinthObject {
 
 	protected $wp;
 

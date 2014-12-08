@@ -9,7 +9,7 @@ use WP_Query;
  * 
  * @package WPlinth
  */
-abstract class AbstractQueryFilter {
+abstract class QueryFilter {
 
 	// Priority level. Lower numbers correspond with earlier execution.
 	const PRIORITY = 10;

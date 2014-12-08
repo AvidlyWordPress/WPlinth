@@ -7,7 +7,7 @@ namespace WPlinth;
  * 
  * @package WPlinth
  */
-abstract class AbstractTaxonomy {
+abstract class Taxonomy {
 
 	protected $types;
 	protected $args;

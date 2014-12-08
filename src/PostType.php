@@ -4,9 +4,10 @@ namespace WPlinth;
 
 /**
  * Base class for post types
+ * 
  * @package WPlinth
  */
-abstract class AbstractPostType extends AbstractWPlinthObject {
+abstract class PostType extends WPlinthObject {
 
 	protected $args;
 	protected $names;

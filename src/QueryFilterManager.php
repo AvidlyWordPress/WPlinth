@@ -5,6 +5,7 @@ namespace WPlinth;
 use WP_Query;
 
 /**
+ * Container of QueryFilter instances in the system.
  * 
  * @package WPlinth
  */

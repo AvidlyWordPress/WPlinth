@@ -2,6 +2,11 @@
 
 namespace WPLinth;
 
+/**
+ * Container of PostType instances in the system.
+ * 
+ * @package WPlinth
+ */
 class PostTypeManager {
 	protected $types = array();
 
